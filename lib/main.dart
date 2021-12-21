@@ -14,20 +14,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
       ),
+      debugShowCheckedModeBanner: false,
       home: const Homepage(),
     );
   }
 }
 
-Future<Map> getUsuarios() async {
+Future<List> getUsuarios() async {
   Client http = Client();
   Uri uri = Uri.parse('https://jsonplaceholder.typicode.com/users');
   Response respuesta = await http.get(uri);
-  Map map = jsonDecode(respuesta.body);
-  return map;
+  List miLista = jsonDecode(respuesta.body);
+  return miLista;
 }
