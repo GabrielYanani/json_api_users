@@ -3,10 +3,10 @@
 //     final datos = datosFromJson(jsonString);
 
 import 'dart:convert';
-
 List<Datos> datosFromJson(String str) => List<Datos>.from(json.decode(str).map((x) => Datos.fromJson(x)));
 
 String datosToJson(List<Datos> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+
 
 class Datos {
     Datos({

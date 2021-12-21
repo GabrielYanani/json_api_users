@@ -1,8 +1,9 @@
-import 'dart:convert';
+import 'dart:convert' as convert;
 
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 import 'package:json_api_users/home_page.dart';
+import 'package:json_api_users/usuarios.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,10 +25,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
-Future<Map> getUsuarios() async {
-  Client http = Client();
-  Uri uri = Uri.parse('https://jsonplaceholder.typicode.com/users');
-  Response respuesta = await http.get(uri);
-  Map map = jsonDecode(respuesta.body);
-  return map;
+Future<Datos> getUsuarios() async {
+  final http.Response respuesta =
+      await http.get(Uri.parse('https://jsonplaceholder.typicode.com/users'));
+  Map <String, dynamic> data = convert.json.decode(respuesta.body) as Map <String, dynamic>;
+  return Datos.fromJson(data); 
 }
