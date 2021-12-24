@@ -19,7 +19,8 @@ class MisContactos extends StatelessWidget {
             child: ListTile(
               tileColor: Colors.white,
               title: Text('${usuario.name} ${usuario.company.name}'),
-              subtitle: Text(usuario.address.street),
+              subtitle:
+                  Text('${usuario.address.street} ${usuario.address.suite}'),
               trailing: Text(usuario.email),
             ),
           );
