@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:json_api_users/controlador.dart';
-import 'package:json_api_users/widget/mis_contactos.dart';
+import 'package:json_api_users/widget/lista_de_contactos.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -21,7 +21,7 @@ class _HomepageState extends State<Homepage> {
           future: getUsuarios(),
           builder: (BuildContext context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
-              return MisContactos(snapshot.data);
+              return ListaDeContactos(snapshot.data);
             }
             return const Center(child: CircularProgressIndicator());
           }),
