@@ -4,7 +4,7 @@ import 'package:json_api_users/paginas/detalle_de_contactos.dart';
 import 'package:json_api_users/usuarios.dart';
 
 class ListaDeContactos extends StatelessWidget {
-  final List<Datos> usuarios;
+  final List<User> usuarios;
   const ListaDeContactos(
     this.usuarios,
   );

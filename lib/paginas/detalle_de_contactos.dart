@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:json_api_users/usuarios.dart';
 
 class DetalleDeContactos extends StatelessWidget {
-  final Datos usuario;
+  final User usuario;
   const DetalleDeContactos(this.usuario);
 
   @override

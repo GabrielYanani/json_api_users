@@ -3,13 +3,13 @@
 //     final datos = datosFromJson(jsonString);
 
 import 'dart:convert';
-List<Datos> datosFromJson(String str) => List<Datos>.from(json.decode(str).map((x) => Datos.fromJson(x)));
+List<User> datosFromJson(String str) => List<User>.from(json.decode(str).map((x) => User.fromJson(x)));
 
-String datosToJson(List<Datos> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+String datosToJson(List<User> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 
-class Datos {
-    Datos({
+class User {
+    User({
         required this.id,
         required this.name,
         required this.username,
@@ -29,7 +29,7 @@ class Datos {
     final String website;
     final Company company;
 
-    factory Datos.fromJson(Map<String, dynamic> json) => Datos(
+    factory User.fromJson(Map<String, dynamic> json) => User(
         id: json["id"],
         name: json["name"],
         username: json["username"],
