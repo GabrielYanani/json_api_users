@@ -8,7 +8,9 @@ class DetalleDeContactos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(usuario.username),
+      ),
       body: SafeArea(
         child: Center(
           child: Column(
