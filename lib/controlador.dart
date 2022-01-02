@@ -7,7 +7,7 @@ class UsuarioProvider extends ChangeNotifier {
   final List<User> _usuarios = [];
   List<User> get usuarios => _usuarios;
 
-  Future<List<User>> getUsuarios() async {
+  Future<void> getUsuarios() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String? datosJson;
     try {

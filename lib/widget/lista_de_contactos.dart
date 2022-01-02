@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:json_api_users/paginas/detalle_de_contactos.dart';
-
 import 'package:json_api_users/usuarios.dart';
 
 class ListaDeContactos extends StatelessWidget {
